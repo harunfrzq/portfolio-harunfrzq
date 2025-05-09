@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="public/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="icon" href="src/img/icon.png" />
     <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
   </head>
@@ -70,7 +71,7 @@
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-5 lg:w-1/2 -mt-4 pb-6">
-            <h1 class="text-base font-semibold text-primary md:text-xl">Halo everyone👋🏻, Iam <span class="font-bold block text-dark dark:text-white text-4xl lg:text-5xl mb-2 mt-2" id="data">Harun Fathurrozaq</span></h1>
+            <h1 class="text-base font-semibold text-primary md:text-xl">Hello everyone👋🏻, Iam <span class="font-bold block text-dark dark:text-white text-4xl lg:text-5xl mb-2 mt-2" id="data">Harun Fathurrozaq</span></h1>
 
             <h2 class="font-medium text-slate-600 dark:text-slate-400 text-lg mb-2 lg:text-2xl">Junior Web Developer</h2>
 
@@ -78,7 +79,7 @@
               "Once you stop learning, you start dying"<span class="font-bold dark:text-zinc-400 block not-italic lg:inline"> - Albert Einsten</span>
             </p>
             <a
-              href="https://drive.google.com/file/d/1zMGdXei7Q_xmlrV4kOLfOefil4W5Bivx/view?usp=sharing"
+              href="https://drive.google.com/file/d/1CPD_xRuBED-Ls5rHGAo80yfsgghtMu1d/view?usp=sharing"
               target="_blank"
               class="animate-fadeUp text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-90 transition-all ease-in-out duration-300 lg:text-lg"
               >Download CV
@@ -271,14 +272,14 @@
           </div>
           <div class="mb-12 lg:mb-16" data-aos="fade-up" data-aos-duration="1000">
             <div class="relative flex flex-col mt-2 text-gray-700 bg-white dark:bg-zinc-800 shadow-md bg-clip-border rounded-xl w-[20rem] lg:w-[450px] px-4">
-              <a href="https://github.com/harunfrzq" target="_blank">
+              <a href="https://reusiuventae.blogspot.com/" target="_blank">
                 <div class="relative h-full -mt-6 overflow-hidden shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40 cursor-pointer transition-all duration-700 hover:scale-[.98] group">
                   <img src="src/img/portfolio/port-4.png" alt="card-image" class="group-hover:scale-110 transition-all duration-700" />
                 </div>
               </a>
               <div class="p-4">
-                <h5 class="block mb-2 font-sans text-xl font-bold leading-snug text-dark dark:text-white">Belajar JS</h5>
-                <p class="block text-base text-dark font-light leading-relaxed text-inherit lg:tracking-wide lg:font-[400] dark:text-white">Repository github saya yang berisi pembelajaran tentang bahasa pemograman JavaScript.</p>
+                <h5 class="block mb-2 font-sans text-xl font-bold leading-snug text-dark dark:text-white">My Document</h5>
+                <p class="block text-base text-dark font-light leading-relaxed text-inherit lg:tracking-wide lg:font-[400] dark:text-white">Semacam blog pribadi yang sedikit banyak menguraikan kisah-kisah dari admin</p>
               </div>
               <div class="px-3 mt-1 pb-4 dark:text-white">
                 <i class="bx bxl-github bx-md hover:text-github transition-all duration-300 cursor-pointer"></i>
@@ -444,140 +445,181 @@
               </div>
             </div>
 
-            <form class="space-y-4">
-              <input type="text" placeholder="Nama" class="w-full rounded-md py-2.5 px-4 border text-sm outline-primary dark:outline-dark" />
-              <input type="email" placeholder="Email" class="w-full rounded-md py-2.5 px-4 border text-sm outline-primary dark:outline-dark" />
-              <input type="text" placeholder="Subjek" class="w-full rounded-md py-2.5 px-4 border text-sm outline-primary dark:outline-dark" />
-              <textarea placeholder="Pesan" rows="6" class="w-full rounded-md px-4 border text-sm pt-2.5 outline-primary dark:outline-dark"></textarea>
-              <button type="button" class="text-white bg-primary hover:opacity-90 transition-all ease-in-out duration-300 font-semibold rounded-md text-sm px-4 py-2.5 w-full">Kirim</button>
+            <form class="space-y-4" name="submit-to-google-sheet">
+              <input type="text" placeholder="Nama" class="w-full rounded-md py-2.5 px-4 border text-sm outline-primary dark:outline-dark" id="Name" aria-describedby="Name" name="Nama" />
+
+              <input type="email" placeholder="Email" class="w-full rounded-md py-2.5 px-4 border text-sm outline-primary dark:outline-dark" id="Email" aria-describedby="Email" name="Email" />
+
+              <input type="text" placeholder="Subjek" class="w-full rounded-md py-2.5 px-4 border text-sm outline-primary dark:outline-dark" id="Subjek" aria-describedby="Subjek" name="Subjek" />
+
+              <textarea placeholder="Pesan" rows="6" class="w-full rounded-md px-4 border text-sm pt-2.5 outline-primary dark:outline-dark" id="Pesan" rows="3" name="Pesan"></textarea>
+
+              <button type="submit" class="btn-kirim text-white bg-primary hover:opacity-90 transition-all ease-in-out duration-300 font-semibold rounded-md text-sm px-4 py-2.5 w-full">Kirim</button>
+              <button type="button" class="bg-indigo-500 ..." disabled>
+                <svg class="mr-3 size-5 animate-spin ..." viewBox="0 0 24 24">
+                  <!-- ... -->
+                </svg>
+                Processing…
+              </button>
+
+              <div class="alert alert-success disabled:none alert-dismissible fade show mt-3 my-alert Success" role="alert"><strong>Mantap bolo !!</strong> data sudah terkirim.</div>
             </form>
           </div>
+
+          <!-- Contact Section End -->
+
+          <!-- Footer Section Start -->
+          <footer class="relative w-full border-t dark:border-dark pt-12 transition duration-300 ease-in-out opacity-90 lg:pt-20 dark:bg-dark">
+            <div class="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl">
+              <div
+                class="aspect-[1500/632] w-[69.25rem] flex-none bg-gradient-to-r from-amber-600 to-amber-800 opacity-25 block"
+                style="
+                  clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 62.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 3.4% 51.1%, 21.4% 69.9%, 58.9% 0.2%, 73.6% 51.7%);
+                "
+              ></div>
+            </div>
+            <div class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
+              <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+                <div class="space-y-2">
+                  <a href="#home" class="font-bold text-[2rem] lg:text-[3rem] text-dark block"> <span class="dark:text-white">Har</span><span class="text-primary">cod&#519;</span> </a>
+                  <h3 class="mb-2 text-lg font-bold text-dark dark:text-white">Hubungi Saya</h3>
+                  <a href="mailto:harunfathurrozaq01@gmail.com" target="_blank" class="text-secondary dark:text-slate-400 hover:text-primary">
+                    <span>harunfathurrozaq01@gmail.com</span>
+                  </a>
+                  <div class="flex gap-x-1">
+                    <!-- instagram -->
+                    <a
+                      href="https://www.instagram.com/harun_fathurrozaq/"
+                      target="_blank"
+                      class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-500 border-slate-400 hover:border-primary hover:bg-primary hover:shadow-lg hover:text-white transition duration-300"
+                    >
+                      <i class="bx bxl-instagram bx-sm"></i>
+                    </a>
+                    <!-- Github -->
+                    <a
+                      href="https://github.com/harunfrzq"
+                      target="_blank"
+                      class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-500 border-slate-400 hover:border-primary hover:bg-primary hover:shadow-lg hover:text-white transition duration-300"
+                    >
+                      <i class="bx bxl-github bx-sm"></i>
+                    </a>
+                    <!-- Linkedin -->
+                    <a
+                      href="https://www.linkedin.com/in/harun-fathurrozaq-88b8821b2"
+                      target="_blank"
+                      class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-500 border-slate-400 hover:border-primary hover:bg-primary hover:shadow-lg hover:text-white transition duration-300"
+                    >
+                      <i class="bx bxl-linkedin bx-sm"></i>
+                    </a>
+                    <!-- Gmail -->
+                    <a
+                      href="mailto:harunfathurrozaq01@gmail.com"
+                      target="_blank"
+                      class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-500 border-slate-400 hover:border-primary hover:bg-primary hover:shadow-lg hover:text-white transition duration-300"
+                    >
+                      <i class="bx bxl-gmail bx-sm"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:mt-0">
+                  <div class="gap-8">
+                    <div>
+                      <h3 class="leading text-xl font-bold text-dark dark:text-white">Tautan</h3>
+                      <ul role="list" class="mt-6 space-y-4">
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#home">Beranda</a>
+                        </li>
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#about">Tentang Saya</a>
+                        </li>
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#resume">Resume</a>
+                        </li>
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#contact">Kontak Saya</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="gap-8">
+                    <div>
+                      <h3 class="leading text-xl font-bold text-dark dark:text-white">Tag</h3>
+                      <ul role="list" class="mt-6 space-y-4">
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="">Programming</a>
+                        </li>
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="">Web</a>
+                        </li>
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="">Teknologi</a>
+                        </li>
+                        <li>
+                          <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="">Github</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-16 flex items-center justify-center border-t border-dark pt-8 border-white/10 sm:mt-20 lg:mt-24">
+                <p class="text-dark dark:text-white text-xs leading-5">© Copyright 2025 HarunEf. All rights reserved</p>
+              </div>
+              <p class="text-center text-sm font-medium text-dark dark:text-white mt-2">
+                Build <span class="text-pink-500"></span>
+                by
+                <!-- -->
+                <a href="https://github.com/NaelYo" target="_blank" class="font-bold text-primary hover:text-primary/80">Harun Fathurrozaq </a>
+              </p>
+            </div>
+          </footer>
+          <!-- Footer Section End -->
+
+          <!-- Back To Top -->
+          <a href="#home" id="toTop" class="hidden">
+            <div class="rounded-full fixed bottom-5 right-5 lg:right-10 cursor-pointer">
+              <span class="mx-auto text-[2rem] z-[9999]">
+                <i class="bx bxs-up-arrow-circle bx-lg animate-fadeUp text-dark dark:text-white"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- ini validasi form contact me kedalam google sheet -->
+          <script>
+            const scriptURL = "https://script.google.com/macros/s/AKfycbzUqQjoU6OBiokDbiOEG1TO2nFVN1rM_-eZmscIAxiZvlyFMxcP9vVFTPvUvKJ6KDiMXw/exec";
+            const form = document.forms["submit-to-google-sheet"];
+            const btnKirim = document.querySelector(".btn-kirim");
+            const btnLoading = document.querySelector(".btn-loading");
+            const myalert = document.querySelector(".my-alert");
+
+            form.addEventListener("submit", (e) => {
+              e.preventDefault();
+              // ketika tombol submit diklik
+              // tampilkan loading,hilangkan tombol kirim
+
+              fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then((response) => {
+                  // tampilkan tombol kirim, hilangkan tombol loading
+
+                  form.reset();
+                  console.log("Success!", response);
+                })
+
+                .catch((error) => console.error("Error!", error.message));
+            });
+          </script>
+          <!-- ini validasi form contact me kedalam google sheet -->
+          <script src="public/js/script.js"></script>
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+          <script>
+            AOS.init();
+          </script>
+          <body></body>
         </div>
       </div>
     </section>
-    <!-- Contact Section End -->
-
-    <!-- Footer Section Start -->
-    <footer class="relative w-full border-t dark:border-dark pt-12 transition duration-300 ease-in-out opacity-90 lg:pt-20 dark:bg-dark">
-      <div class="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl">
-        <div
-          class="aspect-[1500/632] w-[69.25rem] flex-none bg-gradient-to-r from-amber-600 to-amber-800 opacity-25 block"
-          style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 62.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 3.4% 51.1%, 21.4% 69.9%, 58.9% 0.2%, 73.6% 51.7%)"
-        ></div>
-      </div>
-      <div class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-          <div class="space-y-2">
-            <a href="#home" class="font-bold text-[2rem] lg:text-[3rem] text-dark block"> <span class="dark:text-white">Har</span><span class="text-primary">cod&#519;</span> </a>
-            <h3 class="mb-2 text-lg font-bold text-dark dark:text-white">Hubungi Saya</h3>
-            <a href="mailto:naelcristian31@gmail.com" target="_blank" class="text-secondary dark:text-slate-400 hover:text-primary">
-              <span>harunfathurrozaq01@gmail.com</span>
-            </a>
-            <div class="flex gap-x-1">
-              <!-- instagram -->
-              <a
-                href="https://www.instagram.com/harun_fathurrozaq/"
-                target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-500 border-slate-400 hover:border-primary hover:bg-primary hover:shadow-lg hover:text-white transition duration-300"
-              >
-                <i class="bx bxl-instagram bx-sm"></i>
-              </a>
-              <!-- Github -->
-              <a
-                href="https://github.com/harunfrzq"
-                target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-500 border-slate-400 hover:border-primary hover:bg-primary hover:shadow-lg hover:text-white transition duration-300"
-              >
-                <i class="bx bxl-github bx-sm"></i>
-              </a>
-              <!-- Linkedin -->
-              <a
-                href="https://www.linkedin.com/in/harun-fathurrozaq-88b8821b2"
-                target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-500 border-slate-400 hover:border-primary hover:bg-primary hover:shadow-lg hover:text-white transition duration-300"
-              >
-                <i class="bx bxl-linkedin bx-sm"></i>
-              </a>
-              <!-- Gmail -->
-              <a
-                href="mailto:harunfathurrozaq01@gmail.com"
-                target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-slate-500 border-slate-400 hover:border-primary hover:bg-primary hover:shadow-lg hover:text-white transition duration-300"
-              >
-                <i class="bx bxl-gmail bx-sm"></i>
-              </a>
-            </div>
-          </div>
-          <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:mt-0">
-            <div class="gap-8">
-              <div>
-                <h3 class="leading text-xl font-bold text-dark dark:text-white">Tautan</h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#home">Beranda</a>
-                  </li>
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#about">Tentang Saya</a>
-                  </li>
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#portfolio">Portfolio</a>
-                  </li>
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#resume">Resume</a>
-                  </li>
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="#contact">Kontak Saya</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="gap-8">
-              <div>
-                <h3 class="leading text-xl font-bold text-dark dark:text-white">Tag</h3>
-                <ul role="list" class="mt-6 space-y-4">
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="">Programming</a>
-                  </li>
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="">Web</a>
-                  </li>
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="">Teknologi</a>
-                  </li>
-                  <li>
-                    <a class="text-base leading-6 hover:text-primary dark:text-secondary dark:hover:text-primary" href="">Github</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-16 flex items-center justify-center border-t border-dark pt-8 border-white/10 sm:mt-20 lg:mt-24">
-          <p class="text-dark dark:text-white text-xs leading-5">© Copyright 2025 HarunEf. All rights reserved</p>
-        </div>
-        <p class="text-center text-sm font-medium text-dark dark:text-white mt-2">
-          Build <span class="text-pink-500"></span>
-          by
-          <!-- -->
-          <a href="https://github.com/NaelYo" target="_blank" class="font-bold text-primary hover:text-primary/80">Harun Fathurrozaq </a>
-        </p>
-      </div>
-    </footer>
-    <!-- Footer Section End -->
-
-    <!-- Back To Top -->
-    <a href="#home" id="toTop" class="hidden">
-      <div class="rounded-full fixed bottom-5 right-5 lg:right-10 cursor-pointer">
-        <span class="mx-auto text-[2rem] z-[9999]">
-          <i class="bx bxs-up-arrow-circle bx-lg animate-fadeUp text-dark dark:text-white"></i>
-        </span>
-      </div>
-    </a>
-
-    <script src="public/js/script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
